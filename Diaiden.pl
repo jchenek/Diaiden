@@ -30,7 +30,7 @@ print OU2 "perl $Diaiden_PATH\/dependencies/scripts/s5_kegg_anno.pl $Diaiden_PAT
 print OU2 "perl $Diaiden_PATH\/dependencies/scripts/s6_ko_summary.pl $Diaiden_PATH\/dependencies/core_Nifs_db/core_nifs_ko_list.txt diamond_out_2/ > nif_summary_tmp.tsv\n";
 print OU2 "perl $Diaiden_PATH\/dependencies/scripts/s7_simple_anno.pl $Diaiden_PATH\/dependencies/core_Nifs_db/core_nifs_ko_list.txt nif_summary_tmp.tsv > nif_anno_full_info.tsv\n";
 print OU2 "rm nif_summary_tmp.tsv\n";
-print OU2 "Rscript $Diaiden_PATH\/dependencies/scripts/s8_diazotroph_identify.R \$Diaiden_user_PATH\n";
+print OU2 "Rscript $Diaiden_PATH\/dependencies/scripts/s8_diazotroph_identify.r \$Diaiden_user_PATH\n";
 print OU2 "mkdir diazo_nifh_genomes\nsh diazo_cp1_com.txt\nmkdir diazo_nifs_genomes\nsh diazo_cp2_com.txt\nmkdir diazo_nifh_nifs_genomes\nsh diazo_cp3_com.txt\n";
 print OU2 "mkdir workfiles\nmv diamond_out* workfiles/\nmv reformated/ workfiles/\nmv prodigal/ workfiles/\nmv *com.txt workfiles/\ncd $current_path\n";
 system("sh Diaiden_com");
