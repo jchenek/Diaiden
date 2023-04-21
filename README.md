@@ -1,13 +1,14 @@
-Diaiden
+Diaiden (diazotroph identifier)
 =======
 
-Diaiden is a pipeline to extract potential diazotrophs from a group of prokaryotic genomes or metagenome-assembled genomes (MAGs). It defines a genoeme as potential diazotroph based on two criteria:
-1. The genome carries gene (or genes) that encode nitrogenase nifH for nitrogen fixation.
-2. The genome carries gene (or genes) that encode at least two of the three catalytic genes (nifH, nifD, nifK), and at least two of the three biosynthetic genes (nifE, nifN, nifB) for nitrogen fixation.
+Diaiden is a pipeline to extract potential diazotrophs from a group of prokaryotic genomes or metagenome-assembled genomes (MAGs). It defines a genome as potential diazotroph based on two criteria:
+
+1. The genome carries a gene (or genes) that encode nitrogenase nifH for nitrogen fixation.
+2. The genome carries a gene (or genes) that encode at least two of the three catalytic genes (nifH, nifD, nifK) and at least two of the three biosynthetic genes (nifE, nifN, nifB) for nitrogen fixation.
 
 The only input for this pipeline is a directory of genomes or MAGs.
 
-In brief, Diaiden will predict coding sequences (CDS) of genome using prodigal v2.6.3. Then, CDS will be annotated using diamond v2.1.6 based on nifs sequences downloaded from KEGG dataset. Lastly, annotation results are to be summarized using R software, and potential diazotrophs are to be extracted.
+In brief, Diaiden will predict coding sequences (CDS) using prodigal v2.6.3. Then, CDS will be annotated using diamond v2.1.6 based on nifs sequences downloaded from the KEGG database. Lastly, annotation results will be summarized using R software, and potential diazotrophs will be extracted.
 
 Installation
 ---------------
@@ -38,7 +39,7 @@ conda activate diaiden
 perl /PATH/TO/Diaiden.pl -i /PATH/TO/YOUR/genomes_dir -p /PATH/TO/Diaiden_dir
 ```
 
-Diaiden is writen using perl. May sure perl is available.
+Diaiden is writen using perl. Make sure perl is available.
 - `-i`: input the path to your directory where genomes or MAGs were stored
 - `-p`: input the ABSOLUTE path to Diaiden ripository
 
@@ -47,6 +48,7 @@ Diaiden is writen using perl. May sure perl is available.
 There is an example in Diaiden ripository, in which a directory named 'MAGs' was provided.
 
 You can open a new terminal in the Diaiden directory, run the following commands, and see how Diaiden works.
+
 Results from Diaiden will be output at the same path with MAGs directory.
 
 ```sh
@@ -59,8 +61,3 @@ Publications
 ------------
 
 Not yet
-
-
-
-
-
