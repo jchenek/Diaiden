@@ -6,6 +6,7 @@ Diaiden is a pipeline to extract potential diazotrophs from a group of prokaryot
 2. The genome carries gene (or genes) that encode at least two of the three catalytic genes (nifH, nifD, nifK), and at least two of the three biosynthetic genes (nifE, nifN, nifB) for nitrogen fixation.
 
 The only input for this pipeline is a directory of genomes or MAGs.
+
 In brief, Diaiden will predict coding sequences (CDS) of genome using prodigal v2.6.3. Then, CDS will be annotated using diamond v2.1.6 based on nifs sequences downloaded from KEGG dataset. Lastly, annotation results are to be summarized using R software, and potential diazotrophs are to be extracted.
 
 Installation
@@ -26,7 +27,7 @@ conda install r-base=4.2.3 r-dplyr=1.1.1 -y
 
 ### Step 2. Download or clone Diaiden ripository
 ```sh
-git clone https://github.com/bxlab/metaWRAP.git
+git clone https://github.com/jchenek/Diaiden.git
 ```
 
 Usage
@@ -44,6 +45,7 @@ Diaiden is writen using perl. May sure perl is available.
 ### Examples
 
 There is an example in Diaiden ripository, in which a directory named 'MAGs' was provided.
+
 You can open a new terminal in the Diaiden directory, run the following commands, and see how Diaiden works.
 Results from Diaiden will be output at the same path with MAGs directory.
 
