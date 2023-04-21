@@ -6,7 +6,7 @@ getopts('i:p:h');
 
 if($opt_h || !defined($opt_i) || !defined($opt_p)){
 #usage
-print "Usage:\nMake sure you are in Diaiden conda environment.\n";
+print "Usage:\nMake sure you are in diaiden conda environment.\nCommand:\n";
 print "perl /PATH/TO/Diaiden.pl -i /PATH/TO/YOUR/genomes_dir -p /PATH/TO/Diaiden_dir\n";
 }else{
 #define variables
