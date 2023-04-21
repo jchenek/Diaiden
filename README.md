@@ -27,7 +27,6 @@ mamba install -c bioconda prodigal=2.6.3 diamond=2.1.6 -y
 #or
 conda install -c bioconda prodigal=2.6.3 diamond=2.1.6 -y
 
-#mamba is recommend
 mamba install r-base=4.2.3 r-dplyr -y
 #or
 conda install r-base=4.2.3 r-dplyr -y
