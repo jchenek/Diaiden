@@ -23,14 +23,14 @@ conda config --set channel_priority flexible
 conda create -n diaiden -y
 conda activate diaiden
 
-#mamba is recommend
+#mamba is faster
 mamba install -c bioconda prodigal=2.6.3 diamond=2.1.6 -y
 #or
-conda install -c bioconda prodigal=2.6.3 diamond=2.1.6 -y
+#conda install -c bioconda prodigal=2.6.3 diamond=2.1.6 -y
 
-mamba install r-base r-dplyr -y
+mamba install r-base=4.2.3 r-dplyr=1.1.2 -y
 #or
-conda install r-base=4.2.3 r-dplyr -y
+#conda install r-base=4.2.3 r-dplyr=1.1.2 -y
 ```
 
 ### Step 2. Download or clone Diaiden ripository
