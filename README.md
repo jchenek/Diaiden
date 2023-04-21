@@ -3,7 +3,7 @@ Diaiden (diazotroph identifier)
 
 Diaiden is a pipeline to extract potential diazotrophs from a group of prokaryotic genomes or metagenome-assembled genomes (MAGs). It defines a genome as potential diazotroph based on two criteria:
 
-1. The genome carries a gene (or genes) that encode nitrogenase nifH for nitrogen fixation.
+1. The genome carries a gene (or genes) that encode the nitrogenase (nifH) for nitrogen fixation.
 2. The genome carries a gene (or genes) that encode at least two of the three catalytic genes (nifH, nifD, nifK) and at least two of the three biosynthetic genes (nifE, nifN, nifB) for nitrogen fixation.
 
 The only input for this pipeline is a directory of genomes or MAGs.
@@ -21,9 +21,16 @@ conda config --add channels bioconda
 conda config --add channels ursky
 conda create -n diaiden -y
 conda activate diaiden
-conda install -c bioconda prodigal=2.6.3 diamond=2.1.6 -y
-conda install r-base=4.2.3 r-dplyr=1.1.1 -y
 
+#mamba is recommend
+mamba install -c bioconda prodigal=2.6.3 diamond=2.1.6 -y
+#or
+conda install -c bioconda prodigal=2.6.3 diamond=2.1.6 -y
+
+#mamba is recommend
+mamba install r-base=4.2.3 r-dplyr -y
+#or
+conda install r-base=4.2.3 r-dplyr -y
 ```
 
 ### Step 2. Download or clone Diaiden ripository
