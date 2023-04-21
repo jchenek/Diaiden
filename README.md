@@ -19,6 +19,7 @@ conda config --add channels defaults
 conda config --add channels conda-forge
 conda config --add channels bioconda
 conda config --add channels ursky
+conda config --set channel_priority flexible
 conda create -n diaiden -y
 conda activate diaiden
 
@@ -27,7 +28,7 @@ mamba install -c bioconda prodigal=2.6.3 diamond=2.1.6 -y
 #or
 conda install -c bioconda prodigal=2.6.3 diamond=2.1.6 -y
 
-mamba install r-base=4.2.3 r-dplyr -y
+mamba install r-base r-dplyr -y
 #or
 conda install r-base=4.2.3 r-dplyr -y
 ```
