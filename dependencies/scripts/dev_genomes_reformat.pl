@@ -27,6 +27,7 @@ while (<IN>) {
 	s/\n//g;
 	$id=(split /cjwfengecjw/,$_)[0];
 	$seq=(split /cjwfengecjw/,$_)[1]; #<------adjust to get seq
+	$seq=~s/\*$//;
 	print ">$id\n$seq\n";
 }
 unlink './tem.reformated';
