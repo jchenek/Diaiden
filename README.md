@@ -72,7 +72,7 @@ Results from Diaiden will be output at the same path with MAGs directory.
 ```sh
 #activate the diaiden environment
 conda activate diaiden
-#get the absolute path of Diaiden ripository (not necessary for your analysis)
+#get the absolute path of Diaiden ripository
 Diaiden_PATH="$(pwd)" 
 perl Diaiden.pl -i ./example/MAGs -p $Diaiden_PATH
 ```
