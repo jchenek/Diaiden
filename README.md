@@ -59,6 +59,8 @@ Results
 - `diazo_nifh_genomes`: extracted genomes based on 'Criteria 1'
 - `diazo_nifs_genomes`: extracted genomes based on 'Criteria 2'
 - `diazo_nifh_nifs_genomes`: extracted genomes based on either 'Criteria 1' or 'Criteria 2'
+- `nifh.fna`: extracted nifh nucleotide sequences
+- `nifh.faa`: extracted nifh amino acid sequences
 
 Examples
 -----
