@@ -60,7 +60,8 @@ Results
 - `diazo_nifs_genomes`: extracted genomes based on 'Criteria 2'
 - `diazo_nifh_nifs_genomes`: extracted genomes based on either 'Criteria 1' or 'Criteria 2'
 
-### Examples
+Examples
+-----
 
 We provided an example directory for testing.
 
