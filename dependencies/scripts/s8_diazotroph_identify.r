@@ -47,21 +47,21 @@ write.table(diazo_c3,paste(my_path,"/diazo_nifh_nifs.tsv",sep=""),sep="\t",col.n
 #output commond to extract diazo
 diazo_cp1 <- as.data.frame(diazo_nifh_col)
 diazo_cp1 <- diazo_cp1 %>%
-  mutate(com <- paste("cp ",my_genome,"/",diazo_nifh_col,"\.* ./diazo_nifh_genomes",sep = ""))
+  mutate(com <- paste("cp ",my_genome,"/",diazo_nifh_col,".* ./diazo_nifh_genomes",sep = ""))
 names(diazo_cp1) = c("diazo_genome","com")
 diazo_cp1 <- diazo_cp1 %>%
   select(com)
 
 diazo_cp2 <- as.data.frame(diazo_non_nifh_col)
 diazo_cp2 <- diazo_cp2 %>%
-  mutate(com <- paste("cp ",my_genome,"/",diazo_non_nifh_col,"\.* ./diazo_nifs_genomes",sep = ""))
+  mutate(com <- paste("cp ",my_genome,"/",diazo_non_nifh_col,".* ./diazo_nifs_genomes",sep = ""))
 names(diazo_cp2) = c("diazo_genome","com")
 diazo_cp2 <- diazo_cp2 %>%
   select(com)
 
 diazo_cp3 <- as.data.frame(diazo_col)
 diazo_cp3 <- diazo_cp3 %>%
-  mutate(com <- paste("cp ",my_genome,"/",diazo_col,"\.* ./diazo_nifh_nifs_genomes",sep = ""))
+  mutate(com <- paste("cp ",my_genome,"/",diazo_col,".* ./diazo_nifh_nifs_genomes",sep = ""))
 names(diazo_cp3) = c("diazo_genome","com")
 diazo_cp3 <- diazo_cp3 %>%
   select(com)
