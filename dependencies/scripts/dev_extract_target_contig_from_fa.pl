@@ -22,7 +22,8 @@ while (<IN>) {
 	$seq=(split /\s+/,$_)[1]; #<------adjust to get seq
 	#$id=~s/\>//;
 	if ($hash{$id}) {
-	$id1=(split /___/,$id)[0];
+#	$id1=(split /___/,$id)[0];
+	$id1=$id;
 	print ">$id1\n$seq\n";
 	}
 }
