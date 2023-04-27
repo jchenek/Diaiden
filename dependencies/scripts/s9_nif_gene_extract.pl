@@ -6,8 +6,10 @@
 use warnings;
 ($ko, $path_diamond, $path_prodigal_fa, $path, $out_name) = @ARGV ;
 
-system("cat $path_diamond\/*.anno.xls > tmp.$ko\.diamond.xls");
-system("cat $path_prodigal_fa\/*.f*a > tmp.$ko\.prodigal.fa1");
+#system("cat $path_diamond\/*.anno.xls > tmp.$ko\.diamond.xls");
+system("find $path_diamond\/ -name *.anno.xls | xargs cat > tmp.$ko\.diamond.xls");
+#system("cat $path_prodigal_fa\/*.f*a > tmp.$ko\.prodigal.fa1");
+system("find $path_prodigal_fa\/ -name *.f*a | xargs cat > tmp.$ko\.prodigal.fa1");
 system("perl $path\/dependencies/scripts/dev_genomes_reformat.pl tmp.$ko\.prodigal.fa1 > tmp.$ko\.prodigal.fa");
 
 open IN1, "./tmp.$ko\.diamond.xls";
