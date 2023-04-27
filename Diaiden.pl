@@ -40,7 +40,8 @@ system("sh Diaiden_com");
 system("rm ./Diaiden_com");
 print "###############################################################################\n";
 print "###############################################################################\n";
-print "###### Diaiden pipeline is finished!\n###### nif_anno_full_info.tsv showed full annotation results\n###### diazo_\*.tsv files were potential diazotrophs based on differernt criteria\n###### potential diazotroph genomes were put in diazo_\*_genomes dirs\n";
+print "###### Diaiden pipeline is finished!\n###### 'nif_anno_full_info.tsv' showes full annotation results.\n###### 'diazo_\*.tsv' files show potential diazotrophs based on differernt criteria.\n###### 'nifh.f*a' files show nifh sequences extracted from genomes.\n###### Potential diazotroph genomes are put in 'diazo_\*_genomes' dirs.\n";
+print "###### If no diazotroph is detected, you will see error info:\"sh: diazo_cp*_com.txt: \.\.\.\"\n";
 print "###############################################################################\n";
 print "###############################################################################\n";
 }
