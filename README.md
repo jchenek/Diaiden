@@ -74,7 +74,7 @@ Results from Diaiden will be output at the same path as MAGs directory.
 conda activate diaiden
 #get the absolute path of Diaiden repository
 Diaiden_PATH="$(pwd)" 
-perl Diaiden.pl -i ./example/MAGs -p $Diaiden_PATH
+perl Diaiden.pl -i ./example/MAGs -p $Diaiden_PATH -c 2 -b 2
 ```
 
 Publications
