@@ -4,6 +4,8 @@ library(dplyr)
 all_path <- commandArgs(trailingOnly = TRUE)
 my_path <- all_path[1]
 my_genome <- all_path[2]
+Criteria_cg <- all_path[3]
+Criteria_bg <- all_path[4]
 #my_path = "/media/cjw/Work_station_2/seepwater_column/whole_gtdb_diazo_scan/example"
 
 #input ko_summary.xls
@@ -26,9 +28,9 @@ diazo_c1 <- ko_summary_map %>%
 
 #non-nifh criteria
 non_nifh_summary <- ko_summary
-diazo_non_nifh1 <- non_nifh_summary[colSums(non_nifh_summary[1:3,]) >= 2]
+diazo_non_nifh1 <- non_nifh_summary[colSums(non_nifh_summary[1:3,]) >= Criteria_cg]
 diazo_non_nifh1_col <- colnames(diazo_non_nifh1)
-diazo_non_nifh2 <- non_nifh_summary[colSums(non_nifh_summary[4:6,]) >= 2]
+diazo_non_nifh2 <- non_nifh_summary[colSums(non_nifh_summary[4:6,]) >= Criteria_bg]
 diazo_non_nifh2_col <- colnames(diazo_non_nifh2)
 diazo_non_nifh_col <- intersect(diazo_non_nifh1_col,diazo_non_nifh2_col)
 diazo_c2 <- ko_summary_map %>%
