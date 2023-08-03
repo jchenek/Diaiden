@@ -1,18 +1,20 @@
 #!/usr/bin/perl -w
 use warnings;
 use Getopt::Std;
-use vars qw($opt_i $opt_p $opt_h);
-getopts('i:p:h');
+use vars qw($opt_i $opt_p $opt_c $opt_b $opt_h);
+getopts('i:p:c:b:h');
 
-if($opt_h || !defined($opt_i) || !defined($opt_p)){
+if($opt_h || !defined($opt_i) || !defined($opt_p) || !defined($opt_c) || !defined($opt_b)){
 #usage
 print "Usage:\nMake sure you are in diaiden conda environment.\nCommand:\n";
-print "perl /PATH/TO/Diaiden.pl -i /PATH/TO/YOUR/genomes_dir -p /PATH/TO/Diaiden_dir\n";
+print "perl /PATH/TO/Diaiden.pl -i /PATH/TO/YOUR/genomes_dir -p /PATH/TO/Diaiden_dir -c 2 -b 2\nCriteria 2: The genome carries genes that encode at least (-c number) of the three catalytic genes (nifH, nifD, nifK) and at least (-b number) of the three biosynthetic genes (nifE, nifN, nifB) for nitrogen fixation.\n";
 }else{
 #define variables
 $current_path = $ENV{'PWD'};
 $genomes_path = $opt_i;
 $Diaiden_PATH = $opt_p;
+$Criteria_cg = $opt_c;
+$Criteria_bg = $opt_b;
 #print "$genomes_path\n$current_path\n$Diaiden_PATH\n";
 
 #output pipeline
@@ -31,7 +33,7 @@ print OU2 "perl $Diaiden_PATH\/dependencies/scripts/s5_kegg_anno.pl $Diaiden_PAT
 print OU2 "perl $Diaiden_PATH\/dependencies/scripts/s6_ko_summary.pl $Diaiden_PATH\/dependencies/core_Nifs_db/core_nifs_ko_list.txt diamond_out_2/ > nif_summary_tmp.tsv\n";
 print OU2 "perl $Diaiden_PATH\/dependencies/scripts/s7_simple_anno.pl $Diaiden_PATH\/dependencies/core_Nifs_db/core_nifs_ko_list.txt nif_summary_tmp.tsv > nif_anno_full_info.tsv\n";
 print OU2 "rm nif_summary_tmp.tsv\n";
-print OU2 "Rscript $Diaiden_PATH\/dependencies/scripts/s8_diazotroph_identify.r \$Diaiden_user_PATH \$user_genome_PATH\n";
+print OU2 "Rscript $Diaiden_PATH\/dependencies/scripts/s8_diazotroph_identify.r \$Diaiden_user_PATH \$user_genome_PATH $Criteria_cg $Criteria_bg\n";
 print OU2 "mkdir diazo_nifh_genomes\nsh diazo_cp1_com.txt\nmkdir diazo_nifs_genomes\nsh diazo_cp2_com.txt\nmkdir diazo_nifh_nifs_genomes\nsh diazo_cp3_com.txt\n";
 print OU2 "perl $Diaiden_PATH\/dependencies/scripts/s9_nif_gene_extract.pl K02588 diamond_out_1/ prodigal/cds_fna/ $Diaiden_PATH nifh.fna \n";
 print OU2 "perl $Diaiden_PATH\/dependencies/scripts/s9_nif_gene_extract.pl K02588 diamond_out_1/ prodigal/cds_faa/ $Diaiden_PATH nifh.faa \n";
