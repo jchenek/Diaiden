@@ -14,6 +14,11 @@ ko_summary <-
              row.names = 1, sep = '\t', stringsAsFactors = FALSE, check.names = FALSE) 
 ko_summary <- ko_summary %>%
   select(-Ko_ID)
+
+#add an empty col
+cjw <- data.frame(c(0,0,0,0,0,0))
+ko_summary <- cbind(ko_summary,cjw)
+
 #store data
 ko_summary_map <- ko_summary
 #exist or not
