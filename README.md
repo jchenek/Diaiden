@@ -6,7 +6,7 @@ Diaiden is a pipeline to identify potential `diazotrophs` and their `nifh` seque
 - `Criteria 1`: The genome carries a gene (or genes) that encodes the nitrogenase nifH.
 - `Criteria 2`: The genome carries genes that encode at least `-c number` of the three catalytic genes (nifH, nifD, nifK) and at least `-b number` of the three biosynthetic genes (nifE, nifN, nifB) for nitrogen fixation.
 
-In brief, Diaiden will predict coding sequences (CDS) using prodigal v2.6.3. Then, CDS will be annotated using diamond v2.1.6 with parameters "--sensitive -k 1 -e 1e-100 --id 50 --query-cover 75 --subject-cover 75" based on nifs sequences downloaded from the KEGG database. Lastly, annotation results will be summarized using R software, and potential diazotrophs will be extracted.
+In brief, Diaiden will predict coding sequences (CDS) using prodigal v2.6.3. Then, CDS will be annotated using diamond v2.1.6 with parameters "--sensitive -k 1 -e 1e-100 --id 50 --query-cover 75 --subject-cover 75" based on nifs sequences downloaded from the KEGG database (2024/03/14 updated). Lastly, annotation results will be summarized using R software, and potential diazotrophs will be extracted.
 
 Installation
 ---------------
