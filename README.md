@@ -80,4 +80,4 @@ perl Diaiden.pl -i ./example/MAGs -p $Diaiden_PATH -c 2 -b 2
 Publications
 ------------
 
-Not yet
+Chemosynthetic Alphaproteobacterial diazotrophs reside in deep-sea cold-seep bottom waters. 2024. under review.
