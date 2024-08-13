@@ -22,13 +22,9 @@ conda create -n diaiden -y
 conda activate diaiden
 
 #mamba is recommend
-mamba install -c bioconda prodigal=2.6.3 diamond=2.1.6 -y
+mamba install r-base=4.4.0 r-dplyr=1.1.4 prodigal=2.6.3 diamond=2.1.6 -y
 #or
-#conda install -c bioconda prodigal=2.6.3 diamond=2.1.6 -y
-
-mamba install r-base r-dplyr=1.1.2 -y
-#or
-#conda install r-base r-dplyr=1.1.2 -y
+#conda install r-base=4.4.0 r-dplyr=1.1.4 prodigal=2.6.3 diamond=2.1.6 -y
 ```
 
 ### Step 2. Download or clone Diaiden repository
@@ -80,4 +76,5 @@ perl Diaiden.pl -i ./example/MAGs -p $Diaiden_PATH -c 2 -b 2
 Publications
 ------------
 
-Chemosynthetic Alphaproteobacterial diazotrophs reside in deep-sea cold-seep bottom waters. 2024. under review.
+Chen J, Deng L, Wang X, Zhong C, Xia X, Liu H. 2024. Chemosynthetic alphaproteobacterial diazotrophs reside in deep-sea cold-seep bottom waters. mSystems e00176-24.
+DOI: [http://dx.doi.org/10.1128/msystems.00176-24](http://dx.doi.org/10.1128/msystems.00176-24)
