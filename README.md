@@ -73,8 +73,13 @@ Diaiden_PATH="$(pwd)"
 perl Diaiden.pl -i ./example/MAGs -p $Diaiden_PATH -c 2 -b 2
 ```
 
-Publications
+Citing Diaiden
 ------------
+If you use Diaiden in your research, please cite the following papers:
 
 Chen J, Deng L, Wang X, Zhong C, Xia X, Liu H. 2024. Chemosynthetic alphaproteobacterial diazotrophs reside in deep-sea cold-seep bottom waters. mSystems e00176-24.
 DOI: [http://dx.doi.org/10.1128/msystems.00176-24](http://dx.doi.org/10.1128/msystems.00176-24)
+
+Hyatt D, Chen G-L, LoCascio PF, Land ML, Larimer FW, Hauser LJ. 2010. Prodigal: prokaryotic gene recognition and translation initiation site identification. BMC Bioinformatics 11:119.
+
+Buchfink B, Xie C, Huson DH. 2015. Fast and sensitive protein alignment using DIAMOND. Nat Methods 12:59–60.
