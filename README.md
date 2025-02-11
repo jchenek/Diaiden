@@ -1,7 +1,7 @@
 Diaiden (diazotroph identifier)
 =======
 
-Diaiden is a pipeline to identify potential `diazotrophs` and their `nifh` sequences from a group of prokaryotic genomes or metagenome-assembled genomes (MAGs). It defines a genome as a potential diazotroph based on two criteria:
+Diaiden is a pipeline to identify potential `diazotrophs` and their `nifH` sequences from a group of prokaryotic genomes or metagenome-assembled genomes (MAGs). It defines a genome as a potential diazotroph based on two criteria:
 
 - `Criteria 1`: The genome carries a gene (or genes) that encodes the nitrogenase nifH.
 - `Criteria 2`: The genome carries genes that encode at least `-c number` of the three catalytic genes (nifH, nifD, nifK) and at least `-b number` of the three biosynthetic genes (nifE, nifN, nifB) for nitrogen fixation.
