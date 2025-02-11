@@ -91,7 +91,7 @@ Customized nifH database
 -----
 - The nifH gene has been commonly used as a marker to assess the distribution and community of diazotrophs (Bonnet et al., 2023; Delmont et al., 2022; Shiozaki et al., 2018). However, recent work by Mise et al. (2021) has shown that approximately 20% of genomes that contain the nifH gene lack the nifDK genes, which encode essential subunits of nitrogenases (Mise et al., 2021). This suggests that nifH alone is not necessarily to be an indicator of diazotrophs. To address this issue, we only considered a genome that contains the three genes encoding catalytic proteins (nifHDK) essential for N fixation as a potential diazotroph genome. 
 - Using the Diaiden pipeline, we identified 3,316 potential diazotroph genomes from the Genome Taxonomy Database (GTDB) release R214. In addition, we compiled the 48 diazotroph MAGs recently recovered from the worldwide sunlit ocean (Delmont et al., 2022), resulting in a comprehensive diazotroph database comprising 3,364 genomes. We retrieved nifH gene sequences from these potential diazotroph genomes to create a customized nifH gene database.
-- This database can be found in the directory `Customized_nifH_database`.
+- This database can be found in the directory `customized_nifH_database`.
 
 - References
 ```sh
