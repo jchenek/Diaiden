@@ -95,6 +95,8 @@ Customized nifH database
 
 - References
 ```sh
-Bonnet, S., Benavides, M., Le Moigne, F. A. C., Camps, M., Torremocha, A., Grosso, O., Dimier, C., Spungin, D., Berman-Frank, I., Garczarek, L., & Cornejo-Castillo, F. M. (2023). Diazotrophs are overlooked contributors to carbon and nitrogen export to the deep ocean. The ISME Journal, 17(1), 47–58. https://doi.org/10.1038/s41396-022-01319-3
-Delmont, T. O., Pierella Karlusich, J. J., Veseli, I., Fuessel, J., Eren, A. M., Foster, R. A., Bowler, C., Wincker, P., & Pelletier, E. (2022). Heterotrophic bacterial diazotrophs are more abundant than their cyanobacterial counterparts in metagenomes covering most of the sunlit ocean. The ISME Journal, 16(4), 927–936. https://doi.org/10.1038/s41396-021-01135-1
-Mise, K., Masuda, Y., Senoo, K., & Itoh, H. (2021). Undervalued Pseudo- nifH Sequences in Public Databases Distort Metagenomic Insights into Biological Nitrogen Fixers. mSphere, 6(6), e00785-21. https://doi.org/10.1128/msphere.00785-21
+- Bonnet, S., Benavides, M., Le Moigne, F. A. C., Camps, M., Torremocha, A., Grosso, O., Dimier, C., Spungin, D., Berman-Frank, I., Garczarek, L., & Cornejo-Castillo, F. M. (2023). Diazotrophs are overlooked contributors to carbon and nitrogen export to the deep ocean. The ISME Journal, 17(1), 47–58. https://doi.org/10.1038/s41396-022-01319-3
+- Delmont, T. O., Pierella Karlusich, J. J., Veseli, I., Fuessel, J., Eren, A. M., Foster, R. A., Bowler, C., Wincker, P., & Pelletier, E. (2022). Heterotrophic bacterial diazotrophs are more abundant than their cyanobacterial counterparts in metagenomes covering most of the sunlit ocean. The ISME Journal, 16(4), 927–936. https://doi.org/10.1038/s41396-021-01135-1
+- Mise, K., Masuda, Y., Senoo, K., & Itoh, H. (2021). Undervalued Pseudo- nifH Sequences in Public Databases Distort Metagenomic Insights into Biological Nitrogen Fixers. mSphere, 6(6), e00785-21. https://doi.org/10.1128/msphere.00785-21
+- Shiozaki, T., Fujiwara, A., Ijichi, M., Harada, N., Nishino, S., Nishi, S., Nagata, T., & Hamasaki, K. (2018). Diazotroph community structure and the role of nitrogen fixation in the nitrogen cycle in the Chukchi Sea (western Arctic Ocean). Limnology and Oceanography, 63(5), 2191–2205. https://doi.org/10.1002/lno.10933
+```
