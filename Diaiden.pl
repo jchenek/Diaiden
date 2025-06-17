@@ -37,6 +37,10 @@ print OU2 "Rscript $Diaiden_PATH\/dependencies/scripts/s8_diazotroph_identify.r 
 print OU2 "mkdir diazo_nifh_genomes\nsh diazo_cp1_com.txt\nmkdir diazo_nifs_genomes\nsh diazo_cp2_com.txt\nmkdir diazo_nifh_nifs_genomes\nsh diazo_cp3_com.txt\n";
 print OU2 "perl $Diaiden_PATH\/dependencies/scripts/s9_nif_gene_extract.pl K02588 diamond_out_1/ prodigal/cds_fna/ $Diaiden_PATH nifh.fna \n";
 print OU2 "perl $Diaiden_PATH\/dependencies/scripts/s9_nif_gene_extract.pl K02588 diamond_out_1/ prodigal/cds_faa/ $Diaiden_PATH nifh.faa \n";
+print OU2 "perl $Diaiden_PATH\/dependencies/scripts/s9_nif_gene_extract.pl K02586 diamond_out_1/ prodigal/cds_fna/ $Diaiden_PATH nifd.fna \n";
+print OU2 "perl $Diaiden_PATH\/dependencies/scripts/s9_nif_gene_extract.pl K02586 diamond_out_1/ prodigal/cds_faa/ $Diaiden_PATH nifd.faa \n";
+print OU2 "perl $Diaiden_PATH\/dependencies/scripts/s9_nif_gene_extract.pl K02591 diamond_out_1/ prodigal/cds_fna/ $Diaiden_PATH nifk.fna \n";
+print OU2 "perl $Diaiden_PATH\/dependencies/scripts/s9_nif_gene_extract.pl K02591 diamond_out_1/ prodigal/cds_faa/ $Diaiden_PATH nifk.faa \n";
 print OU2 "mkdir workfiles\nmv diamond_out* workfiles/\nmv label/ workfiles/\nmv reformated/ workfiles/\nmv prodigal/ workfiles/\nmv *com.txt workfiles/\ncd $current_path\n";
 system("sh Diaiden_com");
 system("rm ./Diaiden_com");
