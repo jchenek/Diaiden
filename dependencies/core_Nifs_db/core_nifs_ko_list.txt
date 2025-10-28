@@ -1,6 +1,0 @@
-K02586	nifD
-K02591	nifK
-K02588	nifH
-K02587	nifE
-K02592	nifN
-K02585	nifB
