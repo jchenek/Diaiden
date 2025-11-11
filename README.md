@@ -39,7 +39,7 @@ Usage
 perl /PATH/TO/Diaiden.pl -i /PATH/TO/YOUR/genomes_dir -p /PATH/TO/Diaiden_dir -c 2 -b 2
 ```
 
-Make sure perl is available in your system.
+Make sure Perl is available in your system.
 - `-i`: the path to your directory where genomes or MAGs were stored
 - `-p`: the ABSOLUTE path to Diaiden repository
 - `-c`: potential diazotroph must carry genes that encode at least `-c number` of the three catalytic genes (nifH, nifD, nifK)
