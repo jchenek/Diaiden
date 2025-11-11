@@ -6,7 +6,7 @@ Diaiden is a pipeline to identify potential `diazotrophs` and their `nifH` seque
 - `Criteria 1`: The genome carries a gene (or genes) that encodes the nitrogenase nifH.
 - `Criteria 2`: The genome carries genes that encode at least `-c number` of the three catalytic genes (nifH, nifD, nifK) and at least `-b number` of the three biosynthetic genes (nifE, nifN, nifB) for nitrogen fixation.
 
-In brief, Diaiden will predict coding sequences (CDS) using prodigal v2.6.3. Then, CDS will be annotated using diamond v2.1.6 with parameters "--sensitive -k 1 -e 1e-100 --id 50 --query-cover 75 --subject-cover 75" based on nifs sequences downloaded from the KEGG database (2025/10/28 updated). Lastly, annotation results will be summarized using R software, and potential diazotrophs will be extracted.
+In brief, Diaiden will predict coding sequences (CDS) using Prodigal v2.6.3. Then, CDS will be annotated using diamond v2.1.6 with parameters "--sensitive -k 1 -e 1e-100 --id 50 --query-cover 75 --subject-cover 75" based on nifs sequences downloaded from the KEGG database (2025/10/28 updated). Lastly, annotation results will be summarized using R software, and potential diazotrophs will be extracted.
 
 Installation
 ---------------
@@ -21,13 +21,13 @@ conda config --set channel_priority flexible
 conda create -n diaiden -y
 conda activate diaiden
 
-#mamba is recommend
+#mamba is recommended
 mamba install r-base=4.4.0 r-dplyr=1.1.4 prodigal=2.6.3 diamond=2.1.6 -y
 #or
 #conda install r-base=4.4.0 r-dplyr=1.1.4 prodigal=2.6.3 diamond=2.1.6 -y
 ```
 
-### Step 2. Download or clone Diaiden repository
+### Step 2. Download or clone the Diaiden repository
 ```sh
 git clone https://github.com/jchenek/Diaiden.git
 ```
@@ -65,12 +65,12 @@ We provided an example directory for testing.
 
 You can open a new terminal in the Diaiden repository, run the following commands, and see how Diaiden works.
 
-Results from Diaiden will be output at the same path as MAGs directory.
+Results from Diaiden will be output at the same path as the MAGs directory.
 
 ```sh
 #activate the diaiden environment
 conda activate diaiden
-#get the absolute path of Diaiden repository
+#get the absolute path of the Diaiden repository
 Diaiden_PATH="$(pwd)" 
 perl Diaiden.pl -i ./example/MAGs -p $Diaiden_PATH -c 2 -b 2
 ```
@@ -97,6 +97,6 @@ Customized nifH database
 ```sh
 - Bonnet, S., Benavides, M., Le Moigne, F. A. C., Camps, M., Torremocha, A., Grosso, O., Dimier, C., Spungin, D., Berman-Frank, I., Garczarek, L., & Cornejo-Castillo, F. M. (2023). Diazotrophs are overlooked contributors to carbon and nitrogen export to the deep ocean. The ISME Journal, 17(1), 47–58. https://doi.org/10.1038/s41396-022-01319-3
 - Delmont, T. O., Pierella Karlusich, J. J., Veseli, I., Fuessel, J., Eren, A. M., Foster, R. A., Bowler, C., Wincker, P., & Pelletier, E. (2022). Heterotrophic bacterial diazotrophs are more abundant than their cyanobacterial counterparts in metagenomes covering most of the sunlit ocean. The ISME Journal, 16(4), 927–936. https://doi.org/10.1038/s41396-021-01135-1
-- Mise, K., Masuda, Y., Senoo, K., & Itoh, H. (2021). Undervalued Pseudo- nifH Sequences in Public Databases Distort Metagenomic Insights into Biological Nitrogen Fixers. mSphere, 6(6), e00785-21. https://doi.org/10.1128/msphere.00785-21
+- Mise, K., Masuda, Y., Senoo, K., & Itoh, H. (2021). Undervalued Pseudo-nifH Sequences in Public Databases Distort Metagenomic Insights into Biological Nitrogen Fixers. mSphere, 6(6), e00785-21. https://doi.org/10.1128/msphere.00785-21
 - Shiozaki, T., Fujiwara, A., Ijichi, M., Harada, N., Nishino, S., Nishi, S., Nagata, T., & Hamasaki, K. (2018). Diazotroph community structure and the role of nitrogen fixation in the nitrogen cycle in the Chukchi Sea (western Arctic Ocean). Limnology and Oceanography, 63(5), 2191–2205. https://doi.org/10.1002/lno.10933
 ```
