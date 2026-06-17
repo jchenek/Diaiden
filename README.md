@@ -1,7 +1,7 @@
 Diaiden (diazotroph identifier)
 =======
 
-Diaiden is a pipeline to identify potential `diazotrophs` and their `nifH` sequences from a group of prokaryotic genomes or metagenome-assembled genomes (MAGs). It defines a genome as a potential diazotroph based on two criteria:
+Diaiden is a pipeline to identify potential `diazotrophs` and their `nifHDK` sequences from a group of prokaryotic genomes or metagenome-assembled genomes (MAGs). It defines a genome as a potential diazotroph based on two criteria:
 
 - `Criteria 1`: The genome carries a gene (or genes) that encodes the nitrogenase nifH.
 - `Criteria 2`: The genome carries genes that encode at least `-c number` of the three catalytic genes (nifH, nifD, nifK) and at least `-b number` of the three biosynthetic genes (nifE, nifN, nifB) for nitrogen fixation.
@@ -55,8 +55,8 @@ Results
 - `diazo_nifh_genomes`: extracted genomes based on 'Criteria 1'
 - `diazo_nifs_genomes`: extracted genomes based on 'Criteria 2'
 - `diazo_nifh_nifs_genomes`: extracted genomes based on either 'Criteria 1' or 'Criteria 2'
-- `nifh.fna`: extracted nifh nucleotide sequences
-- `nifh.faa`: extracted nifh amino acid sequences
+- `nifh.fna, nifd.fna, nifk.fna,`: extracted nifh nucleotide sequences
+- `nifh.faa, nifd.faa, nifk.faa`: extracted nifh amino acid sequences
 
 Examples
 -----
@@ -77,10 +77,15 @@ perl Diaiden.pl -i ./example/MAGs -p $Diaiden_PATH -c 2 -b 2
 
 Citing Diaiden
 ------------
-If you use Diaiden in your research, please cite the following papers:
+If you use Diaiden in your research, please cite one of the following papers:
 
 Chen J, Deng L, Wang X, Zhong C, Xia X, Liu H. 2024. Chemosynthetic alphaproteobacterial diazotrophs reside in deep-sea cold-seep bottom waters. mSystems e00176-24.
 DOI: [http://dx.doi.org/10.1128/msystems.00176-24](http://dx.doi.org/10.1128/msystems.00176-24)
+
+Deng L, Chen J, Xu Z, Lee S S, Cheung S, Liu H. 2025. Global marine metagenomics reveals the functional diversity and ecological adaptations of diazotrophs across marine ecosystems. Communications Earth & Environment, 6(1), 933. 
+DOI: [https://doi.org/10.1038/s43247-025-02850-9](https://doi.org/10.1038/s43247-025-02850-9)
+
+We used Prodigal and Diamond in Diaiden. Please also cite them properly:
 
 Hyatt D, Chen G-L, LoCascio PF, Land ML, Larimer FW, Hauser LJ. 2010. Prodigal: prokaryotic gene recognition and translation initiation site identification. BMC Bioinformatics 11:119.
 
